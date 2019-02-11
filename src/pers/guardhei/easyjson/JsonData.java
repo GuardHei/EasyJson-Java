@@ -318,7 +318,7 @@ public abstract class JsonData {
                     Array.set(t, i, toArray((JsonArray) value, cClass));
                 } else if (value instanceof String) {
                     if (cClass.isEnum()) {
-                        Array.set(t, i, Enum.valueOf((Class) cClass, (String) value));
+                        Array.set(t, i, Enum.valueOf(cClass, (String) value));
                     } else {
                         Array.set(t, i, cClass.cast(json.get(i)));
                     }
